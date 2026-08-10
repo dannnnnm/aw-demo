@@ -39,6 +39,18 @@ safe-outputs:
   close-issue:
     max: 1
     state-reason: [duplicate]
+
+models:
+  providers:
+    github-copilot:
+      models:
+        'auto':
+          cost:
+            # Placeholder values — replace with actual pricing for this model
+            input: "0e0"      # $0.00 per million input tokens
+            output: "0e0"     # $0.00 per million output tokens
+            cache_read: "0e0"  # $0.00 per million cache-read tokens
+            cache_write: "0e0" # $0.00 per million cache-write tokens
 ---
 
 # Issue Triage Agentic Workflow
