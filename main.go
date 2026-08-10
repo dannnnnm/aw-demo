@@ -16,6 +16,12 @@ func main() {
 		})
 	})
 
+	r.GET("/numbersArray", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": [...]rune{'a', 'b', 'c', 'd', 'e'},
+		})
+	})
+
 	// Start server on port 8080 (default)
 	// Server will listen on 0.0.0.0:8080 (localhost:8080 on Windows)
 	r.Run()
