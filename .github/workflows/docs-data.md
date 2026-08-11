@@ -8,9 +8,13 @@ permissions:
 
 safe-outputs:
   create-pull-request:
-    allowed-branches: [docs/automation]
+    allowed-branches: 
+        - docs/automation
     title-prefix: "[docs] "
     draft: true
+    protected-files:
+        exclude:
+            - README.md
 
 engine: claude
 ---
