@@ -37,7 +37,17 @@ tools:
     min-integrity: none # This workflow is allowed to examine and comment on any issues
 
 timeout-minutes: 10
-engine: claude
+models:
+  providers:
+    github-copilot:
+      models:
+        'auto':
+          cost:
+            # Placeholder values — replace with actual pricing for this model
+            input: "0e0"      # $0.00 per million input tokens
+            output: "0e0"     # $0.00 per million output tokens
+            cache_read: "0e0"  # $0.00 per million cache-read tokens
+            cache_write: "0e0" # $0.00 per million cache-write tokens
 
 source: githubnext/agentics/workflows/issue-triage.md@42c2ab5b4e4c9273534c39259b2e0df7f20f07e9
 ---
